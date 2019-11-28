@@ -1,0 +1,38 @@
+{
+  "id": "cd2f11c7",
+  "name": "Export X",
+  "version": "1.0.0",
+  "description": "React demo AdboeXD plugin",
+  "summary": "Summary here...",
+  "languages": ["en"],
+  "author": "Mudlabs",
+  "helpUrl": "https://mudlabs.com.au/help",
+  "host": {
+    "app": "XD",
+    "minVersion": "13.0"
+  },
+  "icons": [
+    {
+      "path": "images/icon@1x.png",
+      "width": 24,
+      "height": 24
+    },
+    {
+      "path": "images/icon@2x.png",
+      "width": 48,
+      "height": 48
+    },
+    {
+      "path": "images/icon@3x.png",
+      "width": 72,
+      "height": 72
+    }
+  ],
+  "uiEntryPoints": [
+    {
+      "type": "panel",
+      "label": "ExportX",
+      "panelId": "main"
+    }
+  ]
+}

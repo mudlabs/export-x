@@ -1,0 +1,176 @@
+.section {
+  border-top: 1px solid #e4e4e4;
+}
+
+.title {
+  padding-top: 20px;
+  font-size: 1rem;
+  color: rgb(20, 22, 34);
+}
+
+.container {
+  display: flex;
+  margin: 10px 0px 20px;
+  align-items: flext-start;
+  justify-content: flex-start;
+}
+
+.image-item {
+  width: 50%;
+  max-width: 120px;
+  margin: 0px 4px;
+}
+
+.item-label {
+  display: flex;
+  margin: 8px 0px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.label-span {
+  color: gray;
+  margin: 0px 2px;
+  font-size: 10px;
+  width: 20%;
+}
+
+.label-input {
+  width: 70%;
+  margin: 0;
+}
+
+/* Sizes */
+.size-container {
+  margin: 10px 0px 20px;
+}
+.size-list {
+  margin: 0 4px 10px 4px;
+}
+.size-label {
+  width: 100%;
+  max-width: 120px;
+  display: flex;
+  align-items: center;
+}
+.size-span {
+  font-size: 12px;
+  color: gray;
+  margin: 0;
+}
+.size-input {
+  margin: 0px 4px;
+  width: 60%;
+  max-width: 50px;
+}
+.trash-btn {
+  padding: 3px;
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.plus-btn {
+  margin-right: auto;
+  border-radius: 10px;
+  padding: 3px 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* File Name */
+.file-container {
+  margin: 10px 0px 20px;
+}
+.file-list {
+  margin: 0 2px 10px 2px;
+}
+
+.file-name,
+.file-extension,
+.file-scale {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 8px 0;
+}
+
+.file-label {
+  margin: 0 8px 2px 0;
+  font-size: 12px;
+  color: gray;
+}
+
+.scale-params {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.prepend {
+  width: 50px;
+}
+.append {
+  width: 50px;
+}
+.scale-variable {
+  font-style: italic;
+  font-size: 12px;
+  color: gray;
+}
+
+.preview {
+  padding: 12px;
+  margin: 15px 4px;
+  color: #196da8;
+  background-color: #e2e9ef;
+}
+.preview-text {
+  font-size: 12px;
+  margin: 8px 0px;
+  color: #0a2f4a;
+  width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*  Directory */
+.directory-title {
+  border-top: 1px solid #e4e4e4;
+  padding-top: 20px;
+}
+.directory-container {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin: 10px 2px 20px;
+}
+.directory-item-title {
+  width: 100%;
+  margin: 8px 4px 0;
+}
+.directory-name {
+  width: 70%;
+  min-height: 24px;
+  margin: 8px 4px;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 4px 4px 4px 10px;
+  border: 1px solid #e4e4e4;
+}
+.directory-finder {
+  border-radius: 30%;
+  padding: 1px 6px;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+/* FOOTER */
+.footer {
+  margin: 20px 10px;
+}
+.footer-btn {
+  width: 100%;
+}
