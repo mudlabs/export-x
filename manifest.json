@@ -2,11 +2,10 @@
   "id": "cd2f11c7",
   "name": "Export X",
   "version": "1.0.0",
-  "description": "React demo AdboeXD plugin",
-  "summary": "Summary here...",
+  "description": "Adobe XD plugin for streamlined mass exports",
   "languages": ["en"],
   "author": "Mudlabs",
-  "helpUrl": "https://mudlabs.com.au/help",
+  "helpUrl": "https://github.com/mudlabs/export-x/issues",
   "host": {
     "app": "XD",
     "minVersion": "13.0"
