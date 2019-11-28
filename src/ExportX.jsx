@@ -1,6 +1,7 @@
 const React = require("react");
 const ReactDom = require("react-dom");
 const scenegraph = require("scenegraph");
+const fs = require("uxp").storage.localFileSystem;
 
 class HelloForm extends React.Component {
   constructor(props) {
@@ -15,7 +16,11 @@ class HelloForm extends React.Component {
         append: "",
         extension: ""
       },
-      directory: " "
+      directory: {
+        name: "",
+        path: "",
+        folder: null
+      }
     };
   }
 
@@ -130,7 +135,18 @@ class HelloForm extends React.Component {
     this.setState({ file: file });
   }
 
-  selectExportDirectory(event) {}
+  async selectExportDirectory(event) {
+    const folder = await fs.getFolder();
+    if (folder.isFolder) {
+      this.setState({
+        directory: {
+          name: folder.name,
+          path: folder.nativePath,
+          folder: folder
+        }
+      });
+    }
+  }
 
   pointerEnter(event) {
     if (event.target === event.currentTarget) {
@@ -308,7 +324,7 @@ class HelloForm extends React.Component {
           <h2 class="title">Directory</h2>
           <div class="directory-container">
             <p class="directory-item-title">Export Folder</p>
-            <p class="directory-name"></p>
+            <p class="directory-name">{this.state.directory.name}</p>
             <div
               class="directory-finder hoverable"
               onPointerEnter={this.pointerEnter}
