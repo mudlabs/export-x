@@ -1,5 +1,5 @@
-# export-x
-Adobe XD plugin for streamlined mass exports
+# Export X
+Adobe XD plugin for streamlined mass exports.
 
 ## How To Use
 Firstly, create an Artboard of the size you want your images to be exported as; _(`@ 1x scale`)_.
