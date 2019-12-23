@@ -99,7 +99,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/li
 
 
 // module
-exports.push([module.i, ".section {\n  border-top: 1px solid #e4e4e4;\n}\n\n.title {\n  padding-top: 20px;\n  font-size: 1rem;\n  color: rgb(20, 22, 34);\n}\n\n.container {\n  display: flex;\n  margin: 10px 0px 20px;\n  align-items: flext-start;\n  justify-content: flex-start;\n}\n\n.image-item {\n  width: 50%;\n  max-width: 120px;\n  margin: 0px 4px;\n}\n\n.item-label {\n  display: flex;\n  margin: 8px 0px;\n  align-items: center;\n  justify-content: flex-start;\n}\n\n.label-span {\n  color: gray;\n  margin: 0px 2px;\n  font-size: 10px;\n  width: 20%;\n}\n\n.label-input {\n  width: 70%;\n  margin: 0;\n}\n\n/* Sizes */\n.size-container {\n  margin: 10px 0px 20px;\n}\n.size-list {\n  margin: 0 4px 10px 4px;\n}\n.size-label {\n  width: 100%;\n  max-width: 120px;\n  display: flex;\n  align-items: center;\n}\n.size-span {\n  font-size: 12px;\n  color: gray;\n  margin: 0;\n}\n.size-input {\n  margin: 0px 4px;\n  width: 60%;\n  max-width: 50px;\n}\n.trash-btn {\n  padding: 3px;\n  margin-left: auto;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.plus-btn {\n  margin-right: auto;\n  border-radius: 10px;\n  padding: 3px 8px;\n  cursor: pointer;\n  margin-top: 10px;\n  display: inline-block;\n}\n\n/* File Name */\n.file-container {\n  margin: 10px 0px 20px;\n}\n.file-list {\n  margin: 0 2px 10px 2px;\n}\n\n.file-name,\n.file-extension,\n.file-scale {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: flex-start;\n  margin: 8px 0;\n}\n\n.file-label {\n  margin: 0 8px 2px 0;\n  font-size: 12px;\n  color: gray;\n}\n\n.scale-params {\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n\n.prepend {\n  width: 50px;\n}\n.append {\n  width: 50px;\n}\n.scale-variable {\n  font-style: italic;\n  font-size: 12px;\n  color: gray;\n}\n\n.preview {\n  padding: 12px;\n  margin: 15px 4px;\n  color: #196da8;\n  background-color: #e2e9ef;\n}\n.preview-text {\n  font-size: 12px;\n  margin: 8px 0px;\n  color: #0a2f4a;\n  width: 90%;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n}\n\n/*  Directory */\n.directory-title {\n  border-top: 1px solid #e4e4e4;\n  padding-top: 20px;\n}\n.directory-container {\n  display: flex;\n  align-items: baseline;\n  flex-wrap: wrap;\n  margin: 10px 2px 20px;\n}\n.directory-item-title {\n  width: 100%;\n  margin: 8px 4px 0;\n}\n.directory-name {\n  width: 70%;\n  min-height: 24px;\n  margin: 8px 4px;\n  border-radius: 3px;\n  background-color: #fff;\n  padding: 4px 4px 4px 10px;\n  border: 1px solid #e4e4e4;\n}\n.directory-finder {\n  border-radius: 30%;\n  padding: 1px 6px;\n  cursor: pointer;\n  margin-left: 2px;\n}\n\n/* FOOTER */\n.footer {\n  margin: 20px 10px;\n}\n.footer-btn {\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, ".section {\n  border-top: 1px solid #e4e4e4;\n}\n\n.title {\n  padding-top: 20px;\n  font-size: 1rem;\n  color: #152214;\n}\n\n.container {\n  display: flex;\n  margin: 10px 0px 20px;\n  align-items: flext-start;\n  justify-content: flex-start;\n}\n\n.image-item {\n  margin: 0;\n  width: 50%;\n  max-width: 120px;\n}\n\n.item-label {\n  display: flex;\n  margin: 8px 0px;\n  align-items: center;\n  justify-content: flex-start;\n}\n\n.label-span {\n  color: gray;\n  margin: 0 4px 0 2px;\n  font-size: 10px;\n}\n\n.label-input {\n  width: 70%;\n  margin: 0;\n}\n\n/* Import Images from Selection or Directory */\n.import-container {\n  display: flex;\n  align-items: baseline;\n  flex-wrap: wrap;\n  max-width: 200px;\n  margin: 10px;\n}\n.import-from-selection {\n  width: 100%;\n  margin: 4px 0px 0px;\n  position: relative;\n}\n.import-from-selection::after {\n  content: \"or\";\n  font-size: 11px;\n  text-align: center;\n  color: gray;\n  background: linear-gradient(\n    to right,\n    transparent 40%,\n    #f7f7f7 40%,\n    #f7f7f7 60%,\n    transparent 60%\n  );\n}\n.import-from-selection::before {\n  content: \"\";\n  bottom: 5px;\n  width: 100%;\n  height: 1px;\n  position: absolute;\n  background: lightgray;\n}\n.import.btn {\n  margin-bottom: 10px;\n}\n\n.import-from-directory {\n  margin: 4px 0;\n  width: 100%;\n}\n.glob-active,\n.has-root-directory {\n  opacity: 1;\n}\n.glob-inactive,\n.no-root-directory {\n  opacity: 0.5;\n}\n\n.glob-title {\n  color: gray;\n  font-size: 12px;\n  width: 100%;\n  margin-right: 4px;\n}\n.glob-field {\n  margin: 4px 0;\n  max-width: 200px;\n}\n.subtitle {\n  width: 100%;\n}\n.selection-title {\n  margin-bottom: 17px;\n}\n.import-label {\n  margin: 0 8px 2px 0;\n  font-size: 12px;\n  color: gray;\n}\n.selection {\n  width: 70%;\n  min-height: 24px;\n  margin: 2px 0px;\n  border-radius: 3px;\n  background-color: #fff;\n  padding: 4px 4px 4px 10px;\n  border: 1px solid #e4e4e4;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n  font-size: 13px;\n  color: #686868;\n}\n.finder {\n  border-radius: 30%;\n  padding: 1px 6px;\n  margin-left: 2px;\n}\n\n.import-btn {\n  width: 100%;\n}\n\n.btn {\n  width: 100%;\n  margin: 6px 0px;\n}\n\n.imports-list-container {\n  margin: 15px 0px 25px;\n}\n.imports-list-title {\n  font-size: 0.8rem;\n  position: relative;\n  padding: 6px 0px;\n}\n.import-list-toggle {\n  right: 0px;\n  width: 12px;\n  height: 12px;\n  position: absolute;\n}\n.list {\n  max-height: 200px;\n  overflow-y: scroll;\n  display: flex;\n  flex-wrap: wrap;\n}\n.imports-list-item {\n  font-size: 11px;\n  background-color: #fff;\n  border: 1px solid #e4e4e4;\n  border-radius: 3px;\n  margin: 4px;\n  padding: 4px 6px;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\n\n/* Sizscaleses */\n.scales-container {\n  margin: 10px 0px 20px;\n}\n.scales-list {\n  margin: 0 4px 10px 4px;\n}\n.scales-label {\n  width: 100%;\n  max-width: 120px;\n  display: flex;\n  align-items: center;\n}\n.scales-span {\n  font-size: 12px;\n  color: gray;\n  margin: 0;\n}\n.scales-input {\n  margin: 0px 4px;\n  width: 60%;\n  max-width: 50px;\n}\n.trash-btn {\n  padding: 3px;\n  margin-left: auto;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.plus-btn {\n  margin-right: auto;\n  border-radius: 10px;\n  padding: 3px 8px;\n  cursor: pointer;\n  margin-top: 10px;\n  display: inline-block;\n}\n\n/* File Name */\n.file-container {\n  margin: 10px 0px 20px;\n}\n.file-list {\n  margin: 0 2px 10px 2px;\n}\n\n.file-name,\n.file-extension,\n.file-scale {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: flex-start;\n  margin: 8px 0;\n}\n\n.file-label {\n  margin: 0 8px 2px 0;\n  font-size: 12px;\n  color: gray;\n}\n\n.scale-params {\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n\n.prepend {\n  width: 50px;\n}\n.append {\n  width: 50px;\n}\n.scale-variable {\n  font-style: italic;\n  font-size: 12px;\n  color: gray;\n  margin: 0 3px;\n}\n\n.preview {\n  padding: 12px;\n  margin: 15px 4px;\n  color: #1a202b;\n  background-color: #f2f3f5;\n}\n.preview-text {\n  font-size: 12px;\n  margin: 8px 0px;\n  color: #676768;\n  width: 90%;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n}\n\n/*  Directory */\n.directory-title {\n  border-top: 1px solid #e4e4e4;\n  padding-top: 20px;\n}\n.directory-container {\n  display: flex;\n  align-items: baseline;\n  flex-wrap: wrap;\n  margin: 10px 0 20px;\n}\n.export-list-item {\n  flex: 1 1 100%;\n  display: flex;\n  align-items: baseline;\n  flex-wrap: wrap;\n}\n.directory-item-title {\n  margin: 14px 8px 2px 0px;\n  font-size: 12px;\n  color: gray;\n  /* flex: 1 1 100%; */\n}\n.directory-name {\n  width: 70%;\n  min-height: 24px;\n  margin: 2px 0px;\n  border-radius: 3px;\n  background-color: #fff;\n  padding: 4px 4px 4px 10px;\n  border: 1px solid #e4e4e4;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n  font-size: 13px;\n  color: #686868;\n}\n.directory-item-input {\n  margin: 4px 0;\n}\n.directory-finder {\n  border-radius: 30%;\n  padding: 1px 6px;\n  margin-left: 2px;\n}\n\n/* FOOTER */\n.footer {\n  margin: 20px 10px;\n}\n.footer-btn {\n  width: 100%;\n}\n\n/* Events */\n.hoverable {\n  cursor: pointer;\n}\n\n/* No Artboard Selected */\n.no-ab-subtitle {\n  font-size: 14px;\n  margin: 8px 0px;\n}\n\n.no-ab-list {\n  margin: 20px 4px;\n}\n\n.no-ab-item {\n  max-width: 324px;\n  margin: 10px 0px 14px;\n  border-top: 1px solid lightgray;\n}\n.no-ab-para {\n  font-size: 14px;\n  margin: 14px 4px 0px;\n}\n\n.warning {\n  background-color: rgba(255, 204, 0, 0.804);\n  color: rgb(81, 64, 0);\n  margin: 4px 0px;\n  padding: 2px 6px;\n  font-size: 12px;\n  border-radius: 3px;\n}\n\n/* Exporting */\n\n.export-progress {\n  margin: 0 0 20px 0;\n}\n\n.progress-container {\n  font-size: 10px;\n  margin: 6px 0;\n  display: flex;\n  flex-wrap: wrap;\n  align-items: flex-start;\n  justify-content: space-around;\n  color: gray;\n  text-align: center;\n}\n\n.progress-container li:nth-child(2) {\n  flex-grow: 2;\n  font-weight: bold;\n  text-transform: uppercase;\n  font-style: italic;\n  font-size: 12px;\n  margin: 0 4px;\n}\n\n.progress-bar {\n  height: 8px;\n  width: 100%;\n  transition: all ease-out 2s;\n}\n\n.export-subtitle {\n  margin: 20px 0 0;\n  font-size: 12px;\n  font-weight: lighter;\n  color: gray;\n}\n\n.export-info {\n  font-size: 12px;\n  padding: 6px 8px;\n  line-height: 21px;\n  margin: 12px 0 6px 4px;\n  background-color: white;\n  border: 1px solid #e4e4e4;\n  border-radius: 3px;\n  overflow-x: scroll;\n  white-space: nowrap;\n}\n\n.export-finished {\n  margin-top: 100px;\n}\n.finished-btn {\n  margin: 12px 0;\n}\n", ""]);
 
 // exports
 
@@ -32536,22 +32536,61 @@ module.exports = function (css) {
 const React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 const ReactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 const scenegraph = __webpack_require__(/*! scenegraph */ "scenegraph");
+const application = __webpack_require__(/*! application */ "application");
+const { localFileSystem, fileTypes } = __webpack_require__(/*! uxp */ "uxp").storage;
 
-class HelloForm extends React.Component {
+class ExportX extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      props: props,
-      image: { width: null, height: null, x: null, y: null },
-      sizes: [1],
+      callbacks: props.callbacks,
+      artboard: undefined,
+      imports: {
+        files: [],
+        directory: undefined,
+        fromSelection: false,
+        glob: undefined
+      },
+      size_origin: {
+        _rectangleId: "ExportXSize&OriginPreview",
+        _rectangle: undefined,
+        width: 0,
+        height: 0,
+        x: 0,
+        y: 0
+      },
+      scales: [1],
       file: {
         name: "",
         prepend: "",
         append: "",
-        extension: ""
+        extension: "",
+        illegalCharacter: false,
+        overwrite: false,
+        embedImages: true,
+        minify: true,
+        quality: 100
       },
-      directory: " "
+      directory: {
+        root: undefined,
+        name: undefined,
+        illegalCharacter: false
+      },
+      exporting: {
+        inProgress: false,
+        itemsExported: 0,
+        outputDirectory: "",
+        outputFiles: [],
+        finished: false
+      }
     };
+
+    this.Form = this.Form.bind(this);
+    this.Exporting = this.Exporting.bind(this);
+  }
+
+  componentDidMount() {
+    this.state.callbacks.setUpdator(this.updated.bind(this));
   }
 
   get trashIcon() {
@@ -32609,7 +32648,7 @@ class HelloForm extends React.Component {
       },
       React.createElement(
         "g",
-        { "clip-path": "url(#clip-Artboard_1)" },
+        { clipPath: "url(#clip-Artboard_1)" },
         React.createElement("path", {
           fill: "#2D96EF",
           transform: "translate(257 357)",
@@ -32622,78 +32661,705 @@ class HelloForm extends React.Component {
   get fileNamePreview() {
     const { file } = this.state;
     if (file.name.trim() !== "" && file.extension.trim() !== "") {
-      return file.name + file.prepend + this.state.sizes[0] + file.append + "." + file.extension;
+      const name = file.name.includes("%n") ? file.name.replace(/\%n/, "<file-name>") : file.name;
+      return name + file.prepend + this.state.scales[0] + file.append + "." + file.extension.toLowerCase();
     } else {
       return "";
     }
   }
 
+  updated(focusedArtboard, documentRoot) {
+    let { artboard } = this.state;
+    const { size_origin } = this.state;
+    try {
+      if (focusedArtboard) {
+        const rectangle = focusedArtboard.children.filter(child => child.pluginData.id === this.state.size_origin._rectangleId)[0];
+
+        artboard = artboard || focusedArtboard;
+        if (rectangle) {
+          const bounds = rectangle.boundsInParent;
+          size_origin._rectangle = rectangle;
+          size_origin.width = bounds.width;
+          size_origin.height = bounds.height;
+          size_origin.x = bounds.x;
+          size_origin.y = bounds.y;
+        } else {
+          throw "No Rectangle";
+        }
+      } else {
+        artboard = undefined;
+        throw "No Artboard";
+      }
+    } catch (error) {
+      size_origin.x = 0;
+      size_origin.y = 0;
+      size_origin.width = 0;
+      size_origin.height = 0;
+      size_origin._rectangle = undefined;
+    } finally {
+      this.setState({ artboard, size_origin });
+    }
+  }
+
+  isInBounds(parent, frame) {
+    if (frame.x > parent.width) return false;
+    if (frame.width > 0 && frame.x < -frame.width) return false;
+    if (frame.y > parent.height) return false;
+    if (frame.height > 0 && frame.y < -frame.height) return false;
+    return true;
+  }
+
   onImageSizeChange(event) {
     try {
-      const id = event.target.id;
       const value = parseFloat(event.target.value);
-      if (typeof value === "number") {
-        scenegraph.selection.items.forEach(item => {
-          console.log(item);
+      if (typeof value === "number" && !isNaN(value)) {
+        const id = event.target.id;
+        const { size_origin } = this.state;
+        const frame = Object.assign({}, size_origin);
+        const key = /[x|width]/.test(id) ? "width" : "height";
+        const int = /\%$/.test(event.target.value) ? this.state.artboard.localBounds[key] / 100 * value : value;
+
+        frame[id] = int;
+
+        if (/[width|height]/.test(id) && int < 0) {
+          throw `Input Error: ${id} must be a none-negative value.`;
+        } else if (this.isInBounds(this.state.artboard.localBounds, frame)) {
+          size_origin[id] = int;
+          this.setState({ size_origin });
+        } else {
+          throw `Input Error: Rectangle out of bounds.`;
+        }
+
+        application.editDocument({ editLabel: `Export X: Size & Origin (${id})` }, () => {
+          if (size_origin._rectangle === undefined) {
+            const rectangle = new scenegraph.Rectangle();
+            rectangle.name = "Export X: size/origin preview layer";
+            rectangle.fill = new scenegraph.Color("#D0E9FF");
+            rectangle.strokeEnabled = false;
+            size_origin._rectangle = rectangle;
+            this.state.artboard.removeAllChildren();
+            this.state.artboard.addChild(rectangle);
+            size_origin._rectangle.pluginData = {
+              id: this.state.size_origin._rectangleId
+            };
+          }
+
+          size_origin._rectangle.resize(size_origin.width, size_origin.height);
+
+          size_origin._rectangle.placeInParentCoordinates({ x: 0, y: 0 }, { x: size_origin.x, y: size_origin.y });
         });
-        // const { image } = this.state;
-        // image[id] = value;
-        // this.setState({ image: image });
-        // scenegraph.selection.items.forEach(item => {
-        //   item.resize(this.state.image[id], this.state.image[id]);
-        //   item.placeInParentCoordinates(
-        //     { x: 0, y: 0 },
-        //     {
-        //       x: (item.parent.width - item.width) / 2,
-        //       y: item.parent.height - item.height
-        //     }
-        //   );
-        // });
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      event.target.value = this.state.size_origin[event.target.id];
     }
   }
 
   onFileNameChange(event) {
     const { file } = this.state;
     const { id, value } = event.target;
-    file[id] = id === "extension" ? value.toLowerCase() : value;
-    this.setState({ file: file });
+
+    if (this.isInputValid(value)) {
+      file[id] = value;
+      file.illegalCharacter = false;
+      this.setState({ file: file });
+    } else {
+      file.illegalCharacter = true;
+      this.setState({ file: file });
+    }
   }
 
-  selectExportDirectory(event) {}
+  isInputValid(input) {
+    const expression = new RegExp(/[\\\/\:\*\?\"\<\>\|\#\]]/, "gi");
+    return expression.test(input) ? false : true;
+  }
+
+  setNewExportDirectory(event) {
+    const value = event.target.value;
+    const { directory } = this.state;
+
+    if (this.isInputValid(value)) {
+      directory.illegalCharacter = false;
+      directory.name = value;
+    } else {
+      directory.illegalCharacter = true;
+      directory.name = undefined;
+    }
+
+    this.setState({ directory });
+  }
+
+  async selectExportDirectory(event) {
+    const { directory } = this.state;
+    const folder = await localFileSystem.getFolder();
+
+    if (folder.isFolder) {
+      directory.root = folder;
+      this.setState({ directory });
+    }
+  }
 
   pointerEnter(event) {
     if (event.target === event.currentTarget) {
-      event.target.style.backgroundColor = "#E2E9EF40";
+      event.target.style.backgroundColor = "#A6CBED40";
     }
   }
 
   pointerLeave(event) {
     if (event.target === event.currentTarget) {
-      event.target.style.backgroundColor = "#E2E9EF00";
+      event.target.style.backgroundColor = "#A6CBED00";
     }
   }
 
-  addScaleItem() {
-    const { sizes } = this.state;
-    const nextSizes = [...sizes, sizes[sizes.length - 1] + 1];
-    this.setState({ sizes: nextSizes });
-  }
+  async importFromSelection() {
+    const files = await localFileSystem.getFileForOpening({
+      allowMultiple: true
+    });
 
-  removeScaleItem(event) {
-    const { sizes } = this.state;
-    if (sizes.length > 1) {
-      sizes.splice(event.target.itemIndex, 1);
-      this.setState({ sizes: [...sizes] });
+    if (files.length > 0) {
+      const { imports } = this.state;
+      const expression = new RegExp(/png|jpg|svg|jpeg$/, "i");
+      imports.files = files.filter(item => expression.test(item.name));
+      imports.fromSelection = true;
+      imports.directory = undefined;
+      imports.glob = undefined;
+      this.setState({ imports });
     }
   }
 
-  render() {
+  getFileName(file) {
+    const index = file.name.lastIndexOf(".");
+    const name = file.name.slice(0, index);
+    return name;
+  }
+
+  getFileExtension(file) {
+    const index = file.name.lastIndexOf(".") + 1;
+    const extension = file.name.slice(index, file.name.length);
+    return extension;
+  }
+
+  async setImportDirectory() {
+    const directory = await localFileSystem.getFolder();
+    if (directory.isFolder) {
+      const { imports } = this.state;
+      imports.directory = directory;
+      imports.fromSelection = false;
+      imports.files = [];
+      this.setState({ imports });
+    }
+  }
+
+  onGlobPatternChange(event) {
+    const { imports } = this.state;
+    const value = event.target.value.trim();
+    imports.glob = value !== "" ? value : null;
+    this.setState({ imports });
+  }
+
+  async importFromDirectory() {
+    const { imports } = this.state;
+    const entries = await imports.directory.getEntries();
+    const files = [];
+
+    if (imports.glob === undefined) {
+      const expression = new RegExp(/\.(png)$/, "gi");
+      entries.forEach(entry => {
+        if (entry.isFile && expression.test(entry.name)) {
+          files.push(entry);
+        }
+      });
+    } else {
+      const recursive = /^\*\*\//.test(imports.glob);
+      let userExpression = recursive ? imports.glob.slice(3, imports.glob.length) : imports.glob;
+      userExpression = userExpression.replace(new RegExp(/\./, "g"), "\\.");
+      userExpression = userExpression.replace(new RegExp(/\*/, "g"), ".*");
+      const expression = new RegExp(userExpression);
+      const addFilesFromEntries = async function (entries) {
+        for (let i = 0; i < entries.length; i++) {
+          if (entries[i].isFile && expression.test(entries[i].name)) {
+            files.push(entries[i]);
+          } else if (entries[i].isFolder && recursive) {
+            const nextEntries = await entries[i].getEntries();
+            addFilesFromEntries(nextEntries);
+          }
+        }
+      };
+      addFilesFromEntries(entries);
+    }
+
+    imports.files = files;
+    this.setState({ imports });
+  }
+
+  get getImportDirectory() {
+    if (!this.state.imports.fromSelection) {
+      if (this.state.imports.directory) {
+        return this.state.imports.directory.name;
+      }
+    }
+    return "";
+  }
+
+  get getImports() {
+    if (this.state.imports.fromSelection) {
+      if (this.state.imports.files.length > 0) {
+        const length = this.state.imports.files.length;
+        return `[${length}] ${this.state.imports.files.map(i => i.name).join(", ")}`;
+      }
+    }
+    return "";
+  }
+
+  get exportDisabled() {
+    const { imports, file, directory } = this.state;
+
+    const noImportFiles = imports.files.length > 0 ? false : true;
+    const noFileName = file.name !== "" && file.extension !== "" ? false : true;
+    const noDirectory = directory.root !== undefined ? false : true;
+
+    if (noImportFiles || noFileName || noDirectory) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  onExportX() {
+    if (this.exportDisabled) {
+      return;
+    } else {
+      const { exporting } = this.state;
+      exporting.inProgress = true;
+      this.setState({ exporting });
+
+      application.editDocument({ editLabel: `Export X: export images` }, async () => {
+        const {
+          imports,
+          size_origin,
+          scales,
+          artboard,
+          directory
+        } = this.state;
+
+        const replace = (string, name) => string.replace(/(\%n)/g, name);
+
+        for (let i = 0; i < imports.files.length; i++) {
+          let folder;
+          const renditionSettings = [];
+          const asset = imports.files[i];
+          const assetName = this.getFileName(asset);
+
+          size_origin._rectangle.fill = new scenegraph.ImageFill(asset);
+
+          if (directory.name !== undefined) {
+            const folderName = replace(directory.name, assetName);
+            folder = await directory.root.createFolder(folderName);
+            exporting.outputDirectory = directory.root.name + "/" + folder.name;
+          } else {
+            folder = directory.root;
+            exporting.outputDirectory = folder.name;
+          }
+          this.setState({ exporting });
+
+          for (let j = 0; j < scales.length; j++) {
+            const int = scales[j];
+            const { file } = this.state;
+            const overwrite = false;
+            const name = replace(`${file.name}${file.prepend}${int}${file.append}`, assetName);
+            const fileName = `${name}.${file.extension.toLowerCase()}`;
+
+            const rendition = {
+              node: artboard,
+              scale: scales[j],
+              type: application.RenditionType[file.extension],
+              outputFile: await folder.createFile(fileName, { overwrite }),
+              embedImages: false,
+              minify: false,
+              quality: 100
+            };
+
+            renditionSettings.push(rendition);
+
+            exporting.outputFiles.push(fileName);
+            this.setState({ exporting });
+          }
+
+          await application.createRenditions(renditionSettings);
+
+          exporting.itemsExported = i + 1;
+          if (i < imports.files.length - 1) {
+            exporting.outputFiles = [];
+          }
+          this.setState({ exporting });
+        }
+
+        exporting.finished = true;
+        this.setState({ exporting });
+      });
+    }
+  }
+
+  NoArtboardSelected() {
+    return React.createElement(
+      "section",
+      { id: "no-artboard" },
+      React.createElement(
+        "h1",
+        { className: "title" },
+        "No Artboard"
+      ),
+      React.createElement(
+        "p",
+        { className: "no-ab-subtitle" },
+        "You must have an artboard selected to use this plugin."
+      ),
+      React.createElement(
+        "ul",
+        { className: "no-ab-list" },
+        React.createElement(
+          "li",
+          { className: "no-ab-item" },
+          React.createElement(
+            "p",
+            { className: "no-ab-para" },
+            "This Artboard should be empty, as the plugin will be adding and deleting elements."
+          )
+        ),
+        React.createElement(
+          "li",
+          { className: "no-ab-item" },
+          React.createElement(
+            "p",
+            { className: "no-ab-para" },
+            "It's width and height specify the output size and ratio of your images; at 1 times scale."
+          )
+        )
+      )
+    );
+  }
+
+  get exportProgressBar() {
+    const { exporting, imports } = this.state;
+    const percent = exporting.itemsExported / imports.files.length * 100;
+    return {
+      background: `linear-gradient(to right, #2DEF70 ${percent}%, #EBEBEB 0%)`
+    };
+  }
+
+  get currentExportingOutputFiles() {
+    const { exporting } = this.state;
+    return exporting.outputFiles.map((item, index) => React.createElement(
+      "p",
+      { key: index, className: "export-info" },
+      item
+    ));
+  }
+
+  onExportFinishedBtnClick(event) {
+    application.editDocument({ editLabel: "ExportX: reset" }, () => {
+      this.state.size_origin._rectangle.removeFromParent();
+      this.setState({
+        exporting: {
+          inProgress: false,
+          itemsExported: 0,
+          outputDirectory: "",
+          outputFiles: [],
+          finished: false
+        },
+        size_origin: {
+          _rectangleId: "ExportXSize&OriginPreview",
+          _rectangle: undefined,
+          width: 0,
+          height: 0,
+          x: 0,
+          y: 0
+        },
+        imports: {
+          files: [],
+          directory: undefined,
+          fromSelection: false,
+          glob: undefined
+        },
+        scales: [1],
+        file: {
+          name: "",
+          prepend: "",
+          append: "",
+          extension: "",
+          illegalCharacter: false,
+          overwrite: false,
+          embedImages: true,
+          minify: true,
+          quality: 100
+        },
+        directory: {
+          root: undefined,
+          name: undefined,
+          illegalCharacter: false
+        }
+      });
+    });
+  }
+
+  Exporting() {
+    return React.createElement(
+      "div",
+      null,
+      React.createElement(
+        "section",
+        { className: "export-progress" },
+        React.createElement(
+          "ul",
+          { className: "progress-container" },
+          React.createElement(
+            "li",
+            null,
+            this.state.exporting.itemsExported
+          ),
+          React.createElement(
+            "li",
+            null,
+            "of"
+          ),
+          React.createElement(
+            "li",
+            null,
+            this.state.imports.files.length
+          )
+        ),
+        React.createElement("div", { className: "progress-bar", style: this.exportProgressBar })
+      ),
+      React.createElement(
+        "h1",
+        null,
+        "Exporting"
+      ),
+      React.createElement(
+        "h2",
+        { className: "export-subtitle" },
+        "Output Directory"
+      ),
+      React.createElement(
+        "p",
+        { className: "export-info" },
+        this.state.exporting.outputDirectory
+      ),
+      React.createElement(
+        "h2",
+        { className: "export-subtitle" },
+        "Output Files"
+      ),
+      React.createElement(
+        "div",
+        null,
+        this.currentExportingOutputFiles
+      ),
+      this.state.exporting.finished ? React.createElement(
+        "div",
+        { className: "export-finished" },
+        React.createElement(
+          "button",
+          {
+            className: "finished-btn hoverable",
+            onClick: this.onExportFinishedBtnClick.bind(this),
+            "uxp-variant": "cta"
+          },
+          "Finished"
+        )
+      ) : null
+    );
+  }
+
+  dispatchClickEvent(event) {
+    if (event.target && event.key === "Enter") {
+      event.target.click();
+    }
+  }
+
+  scrollIntoView(event) {
+    event.target.scrollIntoView();
+  }
+
+  get listOfImports() {
+    let title;
+    const { imports } = this.state;
+    const length = imports.files.length;
+    const list = imports.files.map((file, index) => {
+      const name = this.getFileName(file);
+      const extension = this.getFileExtension(file);
+      return React.createElement(
+        "li",
+        { key: index, className: "imports-list-item" },
+        "(",
+        extension,
+        ") ",
+        name
+      );
+    });
+
+    if (length !== 1) {
+      title = length > 0 ? `${length} Imports` : `No Imports`;
+    } else {
+      title = "1 Import";
+    }
+
+    return React.createElement(
+      "div",
+      { className: "imports-list-container" },
+      React.createElement(
+        "h2",
+        { className: "imports-list-title" },
+        React.createElement(
+          "span",
+          null,
+          title
+        ),
+        React.createElement("span", { className: "import-list-toggle" })
+      ),
+      React.createElement(
+        "ul",
+        { className: "list" },
+        list
+      )
+    );
+  }
+
+  get extensionNameCheckBoxes() {
+    const { file } = this.state;
+
+    const updateFileValue = event => {
+      event.target.id === "quality" ? file[event.target.id] = Math.round(event.target.value) : file[event.target.id] = !file[event.target.id];
+      this.setState({ file });
+    };
+
+    if (file.extension === "SVG") {
+      return React.createElement(
+        "li",
+        null,
+        React.createElement(
+          "label",
+          null,
+          React.createElement(
+            "span",
+            { className: "file-label" },
+            "Embed Images"
+          ),
+          React.createElement("input", {
+            id: "embedImages",
+            type: "checkbox",
+            checked: file.embedImages,
+            onClick: updateFileValue
+          })
+        ),
+        React.createElement(
+          "label",
+          null,
+          React.createElement(
+            "span",
+            { className: "file-label" },
+            "Minify"
+          ),
+          React.createElement("input", {
+            id: "minify",
+            type: "checkbox",
+            checked: file.minify,
+            onClick: updateFileValue
+          })
+        )
+      );
+    } else if (file.extension === "JPG") {
+      return React.createElement(
+        "li",
+        null,
+        React.createElement(
+          "label",
+          null,
+          React.createElement(
+            "span",
+            { style: { display: "block" }, className: "file-label" },
+            "Quality \u2014 ",
+            file.quality
+          ),
+          React.createElement("input", {
+            min: "1",
+            max: "100",
+            type: "range",
+            id: "quality",
+            style: { width: "100px" },
+            defaultValue: file.quality,
+            onChange: updateFileValue
+          })
+        )
+      );
+    } else {
+      return null;
+    }
+  }
+
+  Form() {
     return React.createElement(
       "form",
-      { onSubmit: this.onDoneClick },
+      { onSubmit: this.onExportX.bind(this) },
+      React.createElement(
+        "section",
+        { id: "import" },
+        React.createElement(
+          "h1",
+          { className: "title" },
+          "Import"
+        ),
+        React.createElement(
+          "ul",
+          { className: "import-container" },
+          React.createElement(
+            "li",
+            { className: "import-from-selection" },
+            React.createElement(
+              "button",
+              {
+                className: "import btn",
+                onClick: this.importFromSelection.bind(this),
+                "uxp-variant": this.state.imports.fromSelection ? "cta" : "primary"
+              },
+              "From Selection"
+            )
+          ),
+          React.createElement(
+            "li",
+            { className: "import-from-directory" },
+            React.createElement(
+              "button",
+              {
+                className: "import btn",
+                onClick: this.setImportDirectory.bind(this),
+                "uxp-variant": this.state.imports.directory ? "cta" : "primary"
+              },
+              "From Directory"
+            ),
+            React.createElement(
+              "label",
+              {
+                className: this.state.imports.directory ? "importing-glob glob-active" : "importing-glob glob-inactive"
+              },
+              React.createElement(
+                "span",
+                { className: "glob-title" },
+                this.state.imports.directory ? "Glob (required)" : "Glob"
+              ),
+              React.createElement("input", {
+                className: "glob-field",
+                placeholder: "*.png",
+                disabled: !this.state.imports.directory,
+                onBlur: this.importFromDirectory.bind(this),
+                onChange: this.onGlobPatternChange.bind(this)
+              })
+            )
+          )
+        ),
+        this.listOfImports
+      ),
       React.createElement(
         "section",
         { id: "image-params" },
@@ -32704,76 +33370,76 @@ class HelloForm extends React.Component {
         ),
         React.createElement(
           "div",
-          { "class": "container" },
+          { className: "container" },
           React.createElement(
             "div",
-            { "class": "image-item" },
+            { className: "image-item" },
             React.createElement(
               "label",
-              { "class": "item-label" },
+              { className: "item-label" },
               React.createElement(
                 "span",
-                { "class": "label-span" },
+                { className: "label-span" },
                 "W"
               ),
               React.createElement("input", {
                 id: "width",
-                "class": "label-input",
-                type: "number",
+                className: "label-input",
                 placeholder: "0",
-                onChange: this.onImageSizeChange.bind(this)
+                defaultValue: this.state.size_origin.width,
+                onBlur: this.onImageSizeChange.bind(this)
               })
             ),
             React.createElement(
               "label",
-              { "class": "item-label" },
+              { className: "item-label" },
               React.createElement(
                 "span",
-                { "class": "label-span" },
+                { className: "label-span" },
                 "H"
               ),
               React.createElement("input", {
                 id: "height",
-                "class": "label-input",
-                type: "number",
+                className: "label-input",
                 placeholder: "0",
-                onChange: this.onImageSizeChange.bind(this)
+                defaultValue: this.state.size_origin.height,
+                onBlur: this.onImageSizeChange.bind(this)
               })
             )
           ),
           React.createElement(
             "div",
-            { "class": "image-item" },
+            { className: "image-item" },
             React.createElement(
               "label",
-              { "class": "item-label" },
+              { className: "item-label" },
               React.createElement(
                 "span",
-                { "class": "label-span" },
+                { className: "label-span" },
                 "X"
               ),
               React.createElement("input", {
                 id: "x",
-                "class": "label-input",
-                type: "number",
+                className: "label-input",
                 placeholder: "0",
-                onChange: this.onImageSizeChange.bind(this)
+                defaultValue: this.state.size_origin.x,
+                onBlur: this.onImageSizeChange.bind(this)
               })
             ),
             React.createElement(
               "label",
-              { "class": "item-label" },
+              { className: "item-label" },
               React.createElement(
                 "span",
-                { "class": "label-span" },
+                { className: "label-span" },
                 "Y"
               ),
               React.createElement("input", {
                 id: "y",
-                "class": "label-input",
-                type: "number",
+                className: "label-input",
                 placeholder: "0",
-                onChange: this.onImageSizeChange.bind(this)
+                defaultValue: this.state.size_origin.y,
+                onBlur: this.onImageSizeChange.bind(this)
               })
             )
           )
@@ -32784,46 +33450,53 @@ class HelloForm extends React.Component {
         { id: "export-scales" },
         React.createElement(
           "h1",
-          { "class": "title" },
-          "Export Scale"
+          { className: "title" },
+          "Scales"
         ),
         React.createElement(
           "div",
-          { "class": "size-container" },
+          { className: "scales-container" },
           React.createElement(
             "ul",
-            { id: "sizes-list", "class": "size-list" },
-            this.state.sizes.map((value, index) => React.createElement(
+            { id: "scales-list", className: "scales-list" },
+            this.state.scales.map((value, index) => React.createElement(
               "li",
               { key: index },
               React.createElement(
                 "label",
-                { "class": "size-label" },
+                { className: "scales-label" },
                 React.createElement(
                   "span",
-                  { "class": "size-span" },
+                  { className: "scales-span" },
                   "@"
                 ),
                 React.createElement("input", {
-                  "class": "size-input",
+                  className: "scales-input",
                   type: "number",
                   type: "number",
-                  value: this.state.sizes[index],
-                  onChange: event => {
+                  defaultValue: this.state.scales[index],
+                  onBlur: event => {
                     const value = parseFloat(event.target.value);
                     if (!isNaN(value)) {
-                      const { sizes } = this.state;
-                      sizes[index] = value;
-                      this.setState({ sizes: [...sizes] });
+                      const { scales } = this.state;
+                      scales[index] = value;
+                      this.setState({ scales: [...scales] });
                     }
                   }
                 }),
                 React.createElement(
                   "div",
                   {
-                    itemkey: index,
-                    "class": "trash-btn hoverable",
-                    onClick: this.removeScaleItem.bind(this)
+                    tabIndex: "0",
+                    className: "trash-btn hoverable",
+                    onKeyDownCapture: this.dispatchClickEvent,
+                    onClick: event => {
+                      const { scales } = this.state;
+                      if (scales.length > 1) {
+                        scales.splice(index, 1);
+                        this.setState({ scales: [...scales] });
+                      }
+                    }
                   },
                   this.trashIcon
                 )
@@ -32833,11 +33506,19 @@ class HelloForm extends React.Component {
           React.createElement(
             "div",
             {
+              tabIndex: "0",
               id: "add-scale",
-              "class": "plus-btn hoverable",
+              className: "plus-btn hoverable",
               onPointerEnter: this.pointerEnter,
               onPointerLeave: this.pointerLeave,
-              onClick: this.addScaleItem.bind(this)
+              onFocus: this.pointerEnter,
+              onBlur: this.pointerLeave,
+              onKeyDownCapture: this.dispatchClickEvent,
+              onClick: event => {
+                const { scales } = this.state;
+                const nextScales = [...scales, scales[scales.length - 1] + 1];
+                this.setState({ scales: nextScales });
+              }
             },
             this.plusIcon
           )
@@ -32848,92 +33529,108 @@ class HelloForm extends React.Component {
         { id: "export-name" },
         React.createElement(
           "h2",
-          { "class": "title" },
+          { className: "title" },
           "File Name"
         ),
+        this.state.file.illegalCharacter ? React.createElement(
+          "p",
+          { className: "warning" },
+          "Invalid Character"
+        ) : null,
         React.createElement(
           "div",
-          { "class": "file-container" },
+          { className: "file-container" },
           React.createElement(
             "ul",
-            { "class": "file-list" },
+            { className: "file-list" },
             React.createElement(
               "li",
-              { "class": "file-name" },
+              { className: "file-name" },
               React.createElement(
                 "label",
-                { "class": "file-label" },
+                { className: "file-label" },
                 "Name"
               ),
               React.createElement("input", {
                 id: "name",
-                "class": "file-input",
-                placeholder: "Artboard1",
+                placeholder: "%n",
+                className: "file-input",
+                onFocus: this.scrollIntoView,
                 onChange: this.onFileNameChange.bind(this)
               })
             ),
             React.createElement(
               "li",
-              { "class": "file-extension" },
+              { className: "file-scale" },
               React.createElement(
                 "label",
-                { "class": "file-label" },
+                { className: "file-label" },
+                "Scale"
+              ),
+              React.createElement(
+                "div",
+                { className: "scale-params" },
+                React.createElement("input", {
+                  id: "prepend",
+                  className: "prepend",
+                  placeholder: "@",
+                  onChange: this.onFileNameChange.bind(this)
+                }),
+                React.createElement(
+                  "i",
+                  { className: "scale-variable" },
+                  "%s"
+                ),
+                React.createElement("input", {
+                  id: "append",
+                  className: "append",
+                  placeholder: "x",
+                  onChange: this.onFileNameChange.bind(this)
+                })
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "file-extension" },
+              React.createElement(
+                "label",
+                { className: "file-label" },
                 "Extension"
               ),
               React.createElement(
                 "select",
                 {
                   id: "extension",
-                  "class": "select",
+                  className: "select",
                   onChange: this.onFileNameChange.bind(this)
                 },
-                React.createElement("options", { selected: "selected" }),
                 React.createElement(
                   "option",
-                  { value: "PNG" },
+                  { defaultValue: "...", value: "PNG" },
                   "PNG"
                 ),
                 React.createElement(
                   "option",
                   { value: "JPG" },
                   "JPG"
+                ),
+                React.createElement(
+                  "option",
+                  { value: "PDF" },
+                  "PDF"
+                ),
+                React.createElement(
+                  "option",
+                  { value: "SVG" },
+                  "SVG"
                 )
               )
             ),
-            React.createElement(
-              "li",
-              { "class": "file-scale" },
-              React.createElement(
-                "label",
-                { "class": "file-label" },
-                "Scale"
-              ),
-              React.createElement(
-                "div",
-                { "class": "scale-params" },
-                React.createElement("input", {
-                  id: "prepend",
-                  "class": "prepend",
-                  placeholder: "@",
-                  onChange: this.onFileNameChange.bind(this)
-                }),
-                React.createElement(
-                  "i",
-                  { "class": "scale-variable" },
-                  "%s"
-                ),
-                React.createElement("input", {
-                  id: "append",
-                  "class": "append",
-                  placeholder: "x",
-                  onChange: this.onFileNameChange.bind(this)
-                })
-              )
-            )
+            this.extensionNameCheckBoxes
           ),
           React.createElement(
             "div",
-            { "class": "preview" },
+            { className: "preview" },
             React.createElement(
               "h4",
               null,
@@ -32941,7 +33638,7 @@ class HelloForm extends React.Component {
             ),
             React.createElement(
               "p",
-              { "class": "preview-text" },
+              { className: "preview-text" },
               this.fileNamePreview
             )
           )
@@ -32952,44 +33649,97 @@ class HelloForm extends React.Component {
         { id: "export-directory" },
         React.createElement(
           "h2",
-          { "class": "title" },
-          "Directory"
+          { className: "title" },
+          "Export"
         ),
         React.createElement(
-          "div",
-          { "class": "directory-container" },
+          "ul",
+          { className: "directory-container" },
           React.createElement(
-            "p",
-            { "class": "directory-item-title" },
-            "Export Folder"
+            "li",
+            { className: "export-list-item" },
+            React.createElement(
+              "p",
+              { className: "directory-item-title subtitle" },
+              "Root Directory"
+            ),
+            React.createElement(
+              "p",
+              {
+                tabIndex: "0",
+                className: "directory-name",
+                onFocus: this.scrollIntoView,
+                onClick: this.selectExportDirectory.bind(this)
+              },
+              this.state.directory.root ? this.state.directory.root.name : ""
+            ),
+            React.createElement(
+              "div",
+              {
+                tabIndex: "0",
+                className: "directory-finder hoverable",
+                onFocus: e => this.pointerEnter,
+                onBlur: this.pointerLeave,
+                onPointerEnter: this.pointerEnter,
+                onPointerLeave: this.pointerLeave,
+                onKeyDownCapture: this.dispatchClickEvent,
+                onClick: this.selectExportDirectory.bind(this)
+              },
+              this.finderIcon
+            )
           ),
-          React.createElement("p", { "class": "directory-name" }),
           React.createElement(
-            "div",
-            {
-              "class": "directory-finder hoverable",
-              onPointerEnter: this.pointerEnter,
-              onPointerLeave: this.pointerLeave,
-              onClick: this.selectExportDirectory.bind(this)
-            },
-            this.finderIcon
+            "li",
+            null,
+            React.createElement(
+              "label",
+              {
+                className: this.state.directory.root ? "has-root-directory" : "no-root-directory"
+              },
+              React.createElement(
+                "span",
+                { className: "directory-item-title subtitle" },
+                this.state.directory.root ? "New Directory (optional)" : "New Directory"
+              ),
+              this.state.directory.illegalCharacter ? React.createElement(
+                "p",
+                { className: "warning" },
+                "Invalid Character"
+              ) : null,
+              React.createElement("input", {
+                placeholder: "%n",
+                disabled: this.state.directory.root ? false : true,
+                className: "directory-item-input",
+                onChange: this.setNewExportDirectory.bind(this)
+              })
+            )
           )
         )
       ),
       React.createElement(
         "footer",
-        { style: { margin: "20px 10px" } },
+        { className: "footer" },
         React.createElement(
           "button",
-          { type: "submit", "uxp-variant": "cta" },
-          "Export"
+          {
+            type: "submit",
+            disabled: this.exportDisabled,
+            "uxp-variant": "cta"
+          },
+          "Begin Exporting"
         )
       )
     );
   }
+
+  render() {
+    if (this.state.artboard === undefined) return React.createElement(this.NoArtboardSelected, null);
+    if (this.state.exporting.inProgress) return React.createElement(this.Exporting, null);
+    return React.createElement(this.Form, null);
+  }
 }
 
-module.exports = HelloForm;
+module.exports = ExportX;
 
 /***/ }),
 
@@ -33008,19 +33758,28 @@ const React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 __webpack_require__(/*! ../src/styles.css */ "./src/styles.css");
 
 let panel;
+let onUpdate;
+const setUpdator = updator => onUpdate = updator;
 
 function show(event) {
   if (!panel) {
     panel = document.createElement("div");
-    ReactDOM.render(React.createElement(App, { panel: panel }), panel);
+    ReactDOM.render(React.createElement(App, { callbacks: { setUpdator } }), panel);
   }
   return document.appendChild(panel);
+}
+
+function update(selection, documentRoot) {
+  if (typeof onUpdate === "function") {
+    onUpdate(selection.focusedArtboard, documentRoot);
+  }
 }
 
 module.exports = {
   panels: {
     main: {
-      show
+      show,
+      update
     }
   }
 };
@@ -33088,6 +33847,17 @@ if(false) {}
 
 /***/ }),
 
+/***/ "application":
+/*!******************************!*\
+  !*** external "application" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("application");
+
+/***/ }),
+
 /***/ "scenegraph":
 /*!*****************************!*\
   !*** external "scenegraph" ***!
@@ -33096,6 +33866,17 @@ if(false) {}
 /***/ (function(module, exports) {
 
 module.exports = require("scenegraph");
+
+/***/ }),
+
+/***/ "uxp":
+/*!**********************!*\
+  !*** external "uxp" ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("uxp");
 
 /***/ })
 

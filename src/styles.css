@@ -5,7 +5,7 @@
 .title {
   padding-top: 20px;
   font-size: 1rem;
-  color: rgb(20, 22, 34);
+  color: #152214;
 }
 
 .container {
@@ -16,9 +16,9 @@
 }
 
 .image-item {
+  margin: 0;
   width: 50%;
   max-width: 120px;
-  margin: 0px 4px;
 }
 
 .item-label {
@@ -30,9 +30,8 @@
 
 .label-span {
   color: gray;
-  margin: 0px 2px;
+  margin: 0 4px 0 2px;
   font-size: 10px;
-  width: 20%;
 }
 
 .label-input {
@@ -40,25 +39,158 @@
   margin: 0;
 }
 
-/* Sizes */
-.size-container {
+/* Import Images from Selection or Directory */
+.import-container {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  max-width: 200px;
+  margin: 10px;
+}
+.import-from-selection {
+  width: 100%;
+  margin: 4px 0px 0px;
+  position: relative;
+}
+.import-from-selection::after {
+  content: "or";
+  font-size: 11px;
+  text-align: center;
+  color: gray;
+  background: linear-gradient(
+    to right,
+    transparent 40%,
+    #f7f7f7 40%,
+    #f7f7f7 60%,
+    transparent 60%
+  );
+}
+.import-from-selection::before {
+  content: "";
+  bottom: 5px;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background: lightgray;
+}
+.import.btn {
+  margin-bottom: 10px;
+}
+
+.import-from-directory {
+  margin: 4px 0;
+  width: 100%;
+}
+.glob-active,
+.has-root-directory {
+  opacity: 1;
+}
+.glob-inactive,
+.no-root-directory {
+  opacity: 0.5;
+}
+
+.glob-title {
+  color: gray;
+  font-size: 12px;
+  width: 100%;
+  margin-right: 4px;
+}
+.glob-field {
+  margin: 4px 0;
+  max-width: 200px;
+}
+.subtitle {
+  width: 100%;
+}
+.selection-title {
+  margin-bottom: 17px;
+}
+.import-label {
+  margin: 0 8px 2px 0;
+  font-size: 12px;
+  color: gray;
+}
+.selection {
+  width: 70%;
+  min-height: 24px;
+  margin: 2px 0px;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 4px 4px 4px 10px;
+  border: 1px solid #e4e4e4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 13px;
+  color: #686868;
+}
+.finder {
+  border-radius: 30%;
+  padding: 1px 6px;
+  margin-left: 2px;
+}
+
+.import-btn {
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  margin: 6px 0px;
+}
+
+.imports-list-container {
+  margin: 15px 0px 25px;
+}
+.imports-list-title {
+  font-size: 0.8rem;
+  position: relative;
+  padding: 6px 0px;
+}
+.import-list-toggle {
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+}
+.list {
+  max-height: 200px;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+.imports-list-item {
+  font-size: 11px;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 3px;
+  margin: 4px;
+  padding: 4px 6px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Sizscaleses */
+.scales-container {
   margin: 10px 0px 20px;
 }
-.size-list {
+.scales-list {
   margin: 0 4px 10px 4px;
 }
-.size-label {
+.scales-label {
   width: 100%;
   max-width: 120px;
   display: flex;
   align-items: center;
 }
-.size-span {
+.scales-span {
   font-size: 12px;
   color: gray;
   margin: 0;
 }
-.size-input {
+.scales-input {
   margin: 0px 4px;
   width: 60%;
   max-width: 50px;
@@ -118,18 +250,19 @@
   font-style: italic;
   font-size: 12px;
   color: gray;
+  margin: 0 3px;
 }
 
 .preview {
   padding: 12px;
   margin: 15px 4px;
-  color: #196da8;
-  background-color: #e2e9ef;
+  color: #1a202b;
+  background-color: #f2f3f5;
 }
 .preview-text {
   font-size: 12px;
   margin: 8px 0px;
-  color: #0a2f4a;
+  color: #676768;
   width: 90%;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -145,25 +278,40 @@
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  margin: 10px 2px 20px;
+  margin: 10px 0 20px;
+}
+.export-list-item {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 .directory-item-title {
-  width: 100%;
-  margin: 8px 4px 0;
+  margin: 14px 8px 2px 0px;
+  font-size: 12px;
+  color: gray;
+  /* flex: 1 1 100%; */
 }
 .directory-name {
   width: 70%;
   min-height: 24px;
-  margin: 8px 4px;
+  margin: 2px 0px;
   border-radius: 3px;
   background-color: #fff;
   padding: 4px 4px 4px 10px;
   border: 1px solid #e4e4e4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 13px;
+  color: #686868;
+}
+.directory-item-input {
+  margin: 4px 0;
 }
 .directory-finder {
   border-radius: 30%;
   padding: 1px 6px;
-  cursor: pointer;
   margin-left: 2px;
 }
 
@@ -173,4 +321,96 @@
 }
 .footer-btn {
   width: 100%;
+}
+
+/* Events */
+.hoverable {
+  cursor: pointer;
+}
+
+/* No Artboard Selected */
+.no-ab-subtitle {
+  font-size: 14px;
+  margin: 8px 0px;
+}
+
+.no-ab-list {
+  margin: 20px 4px;
+}
+
+.no-ab-item {
+  max-width: 324px;
+  margin: 10px 0px 14px;
+  border-top: 1px solid lightgray;
+}
+.no-ab-para {
+  font-size: 14px;
+  margin: 14px 4px 0px;
+}
+
+.warning {
+  background-color: rgba(255, 204, 0, 0.804);
+  color: rgb(81, 64, 0);
+  margin: 4px 0px;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+/* Exporting */
+
+.export-progress {
+  margin: 0 0 20px 0;
+}
+
+.progress-container {
+  font-size: 10px;
+  margin: 6px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  color: gray;
+  text-align: center;
+}
+
+.progress-container li:nth-child(2) {
+  flex-grow: 2;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 12px;
+  margin: 0 4px;
+}
+
+.progress-bar {
+  height: 8px;
+  width: 100%;
+  transition: all ease-out 2s;
+}
+
+.export-subtitle {
+  margin: 20px 0 0;
+  font-size: 12px;
+  font-weight: lighter;
+  color: gray;
+}
+
+.export-info {
+  font-size: 12px;
+  padding: 6px 8px;
+  line-height: 21px;
+  margin: 12px 0 6px 4px;
+  background-color: white;
+  border: 1px solid #e4e4e4;
+  border-radius: 3px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.export-finished {
+  margin-top: 100px;
+}
+.finished-btn {
+  margin: 12px 0;
 }

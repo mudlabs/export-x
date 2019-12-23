@@ -25,6 +25,6 @@ module.exports = {
   externals: {
     uxp: "uxp",
     scenegraph: "scenegraph",
-    applicaiton: "application"
+    application: "application"
   }
 };
