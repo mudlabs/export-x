@@ -68,7 +68,7 @@ class ExportX extends React.Component {
       >
         <path d="M0,0H24V24H0Z" fill="none" />
         <path
-          fill="gray"
+          fill={this.state.scales.length > 1 ? "#2D96EF" : "lightgray"}
           d="M15.5,4l-1-1h-5l-1,1H5V6H19V4ZM6,19a2.006,2.006,0,0,0,2,2h8a2.006,2.006,0,0,0,2-2V7H6Zm2-5V9h8V19H8Zm8,0h0Z"
         />
       </svg>
@@ -831,8 +831,13 @@ class ExportX extends React.Component {
                       }}
                     />
                     <div
-                      tabIndex="0"
                       className="trash-btn hoverable"
+                      onPointerEnter={e => {
+                        if (this.state.scales.length > 1) {
+                          this.pointerEnter(e);
+                        }
+                      }}
+                      onPointerLeave={this.pointerLeave}
                       onKeyDownCapture={this.dispatchClickEvent}
                       onClick={event => {
                         const { scales } = this.state;
