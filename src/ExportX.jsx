@@ -58,73 +58,17 @@ class ExportX extends React.Component {
     this.state.callbacks.setUpdator(this.updated.bind(this));
   }
 
-  get trashIcon() {
-    return (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M0,0H24V24H0Z" fill="none" />
-        <path
-          fill={this.state.scales.length > 1 ? "#2D96EF" : "lightgray"}
-          d="M15.5,4l-1-1h-5l-1,1H5V6H19V4ZM6,19a2.006,2.006,0,0,0,2,2h8a2.006,2.006,0,0,0,2-2V7H6Zm2-5V9h8V19H8Zm8,0h0Z"
-        />
-      </svg>
-    );
-  }
-
-  get plusIcon() {
-    return (
-      <svg
-        width="15"
-        height="15"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g transform="translate(-401 -778)">
-          <rect
-            width="21"
-            height="21"
-            fill="none"
-            transform="translate(401 778)"
-          />
-          <path
-            fill="#2D96EF"
-            transform="translate(404 781)"
-            d="M7,18V11H0V7H7V0h4V7h7v4H11v7Z"
-          />
-        </g>
-      </svg>
-    );
-  }
-
-  get finderIcon() {
-    return (
-      <svg
-        width="17"
-        height="17"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g clipPath="url(#clip-Artboard_1)">
-          <path
-            fill="#2D96EF"
-            transform="translate(257 357)"
-            d="M-239-345a2,2,0,0,1,2-2,2,2,0,0,1,2,2,2,2,0,0,1-2,2A2,2,0,0,1-239-345Zm-8,0a2,2,0,0,1,2-2,2,2,0,0,1,2,2,2,2,0,0,1-2,2A2,2,0,0,1-247-345Zm-8,0a2,2,0,0,1,2-2,2,2,0,0,1,2,2,2,2,0,0,1-2,2A2,2,0,0,1-255-345Z"
-          />
-        </g>
-      </svg>
-    );
-  }
-
   get fileNamePreview() {
     const { file } = this.state;
     if (file.name.trim() !== "" && file.extension.trim() !== "") {
-      const name = file.name.includes("%n")
-        ? file.name.replace(/\%n/, "<file-name>")
-        : file.name;
+      let name = file.name;
+      if (name.includes("%n")) {
+        name = name.replace(/\%n/, "<file-name>");
+      }
+      if (name.includes("%i")) {
+        name = name.replace(/\%i/, "<index>");
+      }
+
       return (
         name +
         file.prepend +
@@ -302,7 +246,7 @@ class ExportX extends React.Component {
 
     if (files.length > 0) {
       const { imports } = this.state;
-      const expression = new RegExp(/png|jpg|svg|jpeg$/, "i");
+      const expression = new RegExp(/png|jpg|jpeg$/, "i");
       imports.files = files.filter(item => expression.test(item.name));
       imports.fromSelection = true;
       imports.directory = undefined;
@@ -432,7 +376,11 @@ class ExportX extends React.Component {
             directory
           } = this.state;
 
-          const replace = (string, name) => string.replace(/(\%n)/g, name);
+          const replace = (string, name, index) => {
+            let output = string.replace(/(\%n)/g, name);
+            output = output.replace(/(\%i)/g, index);
+            return output;
+          };
 
           for (let i = 0; i < imports.files.length; i++) {
             let folder;
@@ -443,7 +391,7 @@ class ExportX extends React.Component {
             size_origin._rectangle.fill = new scenegraph.ImageFill(asset);
 
             if (directory.name !== undefined) {
-              const folderName = replace(directory.name, assetName);
+              const folderName = replace(directory.name, assetName, i);
               folder = await directory.root.createFolder(folderName);
               exporting.outputDirectory =
                 directory.root.name + "/" + folder.name;
@@ -456,10 +404,11 @@ class ExportX extends React.Component {
             for (let j = 0; j < scales.length; j++) {
               const int = scales[j];
               const { file } = this.state;
-              const overwrite = false;
+              const overwrite = file.overwrite;
               const name = replace(
                 `${file.name}${file.prepend}${int}${file.append}`,
-                assetName
+                assetName,
+                i
               );
               const fileName = `${name}.${file.extension.toLowerCase()}`;
 
@@ -468,9 +417,9 @@ class ExportX extends React.Component {
                 scale: scales[j],
                 type: application.RenditionType[file.extension],
                 outputFile: await folder.createFile(fileName, { overwrite }),
-                embedImages: false,
-                minify: false,
-                quality: 100
+                embedImages: file.embedImages,
+                minify: file.minify,
+                quality: file.quality
               };
 
               renditionSettings.push(rendition);
@@ -847,7 +796,22 @@ class ExportX extends React.Component {
                         }
                       }}
                     >
-                      {this.trashIcon}
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M0,0H24V24H0Z" fill="none" />
+                        <path
+                          fill={
+                            this.state.scales.length > 1
+                              ? "#2D96EF"
+                              : "lightgray"
+                          }
+                          d="M15.5,4l-1-1h-5l-1,1H5V6H19V4ZM6,19a2.006,2.006,0,0,0,2,2h8a2.006,2.006,0,0,0,2-2V7H6Zm2-5V9h8V19H8Zm8,0h0Z"
+                        />
+                      </svg>
                     </div>
                   </label>
                 </li>
@@ -868,7 +832,26 @@ class ExportX extends React.Component {
                 this.setState({ scales: nextScales });
               }}
             >
-              {this.plusIcon}
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g transform="translate(-401 -778)">
+                  <rect
+                    width="21"
+                    height="21"
+                    fill="none"
+                    transform="translate(401 778)"
+                  />
+                  <path
+                    fill="#2D96EF"
+                    transform="translate(404 781)"
+                    d="M7,18V11H0V7H7V0h4V7h7v4H11v7Z"
+                  />
+                </g>
+              </svg>
             </div>
           </div>
         </section>
@@ -936,9 +919,7 @@ class ExportX extends React.Component {
             <li className="export-list-item">
               <p className="directory-item-title subtitle">Root Directory</p>
               <p
-                tabIndex="0"
                 className="directory-name"
-                onFocus={this.scrollIntoView}
                 onClick={this.selectExportDirectory.bind(this)}
               >
                 {this.state.directory.root
@@ -948,14 +929,27 @@ class ExportX extends React.Component {
               <div
                 tabIndex="0"
                 className="directory-finder hoverable"
-                onFocus={e => this.pointerEnter}
+                onFocus={this.pointerEnter}
                 onBlur={this.pointerLeave}
                 onPointerEnter={this.pointerEnter}
                 onPointerLeave={this.pointerLeave}
                 onKeyDownCapture={this.dispatchClickEvent}
                 onClick={this.selectExportDirectory.bind(this)}
               >
-                {this.finderIcon}
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clipPath="url(#clip-Artboard_1)">
+                    <path
+                      fill="#2D96EF"
+                      transform="translate(257 357)"
+                      d="M-239-345a2,2,0,0,1,2-2,2,2,0,0,1,2,2,2,2,0,0,1-2,2A2,2,0,0,1-239-345Zm-8,0a2,2,0,0,1,2-2,2,2,0,0,1,2,2,2,2,0,0,1-2,2A2,2,0,0,1-247-345Zm-8,0a2,2,0,0,1,2-2,2,2,0,0,1,2,2,2,2,0,0,1-2,2A2,2,0,0,1-255-345Z"
+                    />
+                  </g>
+                </svg>
               </div>
             </li>
             <li>
