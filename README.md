@@ -11,7 +11,7 @@ Specifies the images to be imported.
 * **Form Selection**
   * Imports a selection of images from the file system.
 * **From Directory**
-  * Specifies the _root_ directory in import images from.
+  * Specifies the _root_ directory to import images from.
   * Requires a Globbing pattern to specify the import items.
 
 
