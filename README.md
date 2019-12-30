@@ -1,5 +1,5 @@
 # Export X
-Adobe XD plugin for streamlined mass exports.
+Adobe XD plugin for streamlined resizing and export of existing image assets.
 
 ## How To Use
 First, create an Artboard of the size you want your images to be exported as; _(`@ 1x scale`)_. Then work your way down the panel sections. Details of each section can be found below.
@@ -56,3 +56,11 @@ Specifies the export directory for each exported image.
 * Optionally specify a new directory name for each export group.
   * `%n` maps to the __name__ of the _imported_ file.
   * `%i` maps to the __index__ of the _imported_ file, in the _files_ array.
+
+
+---
+
+
+#### NOTE
+ * If the export file names are not unique, the plugin will attempt to resolve this by _prepending_ `%i` to the conflicting file names.
+ * If the export directory name is not unique for each image group, all exported images will be exported to the same directory.
