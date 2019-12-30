@@ -32905,7 +32905,6 @@ class ExportX extends React.Component {
             try {
               folder = await directory.root.getEntry(folderName);
             } catch (error) {
-              console.log("the error", error);
               folder = await directory.root.createFolder(folderName);
             }
             exporting.outputDirectory = directory.root.name + "/" + folder.name;
@@ -32921,12 +32920,21 @@ class ExportX extends React.Component {
             const overwrite = file.overwrite;
             const name = replace(`${file.name}${file.prepend}${int}${file.append}`, assetName, i);
             const fileName = `${name}.${file.extension.toLowerCase()}`;
+            let outputFile;
+
+            try {
+              outputFile = await folder.createFile(fileName, { overwrite });
+            } catch (error) {
+              outputFile = await folder.createFile(`${i}_${fileName}`, {
+                overwrite
+              });
+            }
 
             const rendition = {
               node: artboard,
               scale: scales[j],
               type: application.RenditionType[file.extension],
-              outputFile: await folder.createFile(fileName, { overwrite }),
+              outputFile: outputFile,
               embedImages: file.embedImages,
               minify: file.minify,
               quality: file.quality
@@ -32934,7 +32942,7 @@ class ExportX extends React.Component {
 
             renditionSettings.push(rendition);
 
-            exporting.outputFiles.push(fileName);
+            exporting.outputFiles.push(outputFile.name);
             this.setState({ exporting });
           }
 
