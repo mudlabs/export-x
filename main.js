@@ -32658,9 +32658,10 @@ class ExportX extends React.Component {
         const id = event.target.id;
         const { size_origin } = this.state;
         const frame = Object.assign({}, size_origin);
-        const key = /[x|width]/.test(id) ? "width" : "height";
+        const key = /x|width/.test(id) ? "width" : "height";
         const int = /\%$/.test(event.target.value) ? this.state.artboard.localBounds[key] / 100 * value : value;
 
+        console.log(id, /[x|width]/.test(id), /\%$/.test(event.target.value), this.state.artboard.localBounds[key], key);
         frame[id] = int;
 
         if (/[width|height]/.test(id) && int < 0) {
@@ -32901,7 +32902,12 @@ class ExportX extends React.Component {
 
           if (directory.name !== undefined) {
             const folderName = replace(directory.name, assetName, i);
-            folder = await directory.root.createFolder(folderName);
+            try {
+              folder = await directory.root.getEntry(folderName);
+            } catch (error) {
+              console.log("the error", error);
+              folder = await directory.root.createFolder(folderName);
+            }
             exporting.outputDirectory = directory.root.name + "/" + folder.name;
           } else {
             folder = directory.root;
@@ -33224,7 +33230,10 @@ class ExportX extends React.Component {
           null,
           React.createElement(
             "span",
-            { style: { display: "block" }, className: "file-label" },
+            {
+              style: { display: "block", width: "100%" },
+              className: "file-label"
+            },
             "Quality \u2014 ",
             file.quality
           ),
