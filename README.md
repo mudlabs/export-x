@@ -7,7 +7,7 @@ First, create an Artboard of the size you want your images to be exported as; _(
 ---
 
 ### Imports
-Specifies the images to be imported.
+Specifies the images to be imported. You can import ___PNG___ and ___JPG/JPEG___ images. 
 * **Form Selection**
   * Imports a selection of images from the file system.
 * **From Directory**
