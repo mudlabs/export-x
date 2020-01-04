@@ -64,3 +64,6 @@ Specifies the export directory for each exported image.
 #### NOTE
  * If the export file names are not unique, the plugin will attempt to resolve this by _prepending_ `%i` to the conflicting file names.
  * If the export directory name is not unique for each image group, all exported images will be exported to the same directory.
+ * For support you can:
+   * File an [issue](https://github.com/mudlabs/export-x/issues), if you found a bug _(or want another feature)_.
+   * Or email _support@mudlabs.com.au_.
