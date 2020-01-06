@@ -52,28 +52,14 @@
   margin: 4px 0px 0px;
   position: relative;
 }
-.import-from-selection::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background: lightgray;
-}
-.import-from-selection::before {
-  content: "or";
+
+.import-selection-separator {
+  color: gray;
   font-size: 11px;
-  position: absolute;
-  bottom: 4px;
   width: 100%;
   text-align: center;
-  color: gray;
-  background: linear-gradient(
-    to right,
-    #f7f7f700 40%,
-    #f7f7f7 40%,
-    #f7f7f7 60%,
-    #f7f7f700 60%
-  );
 }
+
 .import.btn {
   margin-bottom: 10px;
 }

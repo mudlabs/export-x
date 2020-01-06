@@ -589,10 +589,6 @@ class ExportX extends React.Component {
     }
   }
 
-  scrollIntoView(event) {
-    event.target.scrollIntoView();
-  }
-
   get listOfImports() {
     let title;
     const { imports } = this.state;
@@ -637,7 +633,7 @@ class ExportX extends React.Component {
     if (file.extension === "SVG") {
       return (
         <li>
-          <label>
+          <label style={{ width: "100%" }}>
             <span className="file-label">Embed Images</span>
             <input
               id="embedImages"
@@ -646,7 +642,7 @@ class ExportX extends React.Component {
               onClick={updateFileValue}
             />
           </label>
-          <label>
+          <label style={{ width: "100%" }}>
             <span className="file-label">Minify</span>
             <input
               id="minify"
@@ -701,6 +697,7 @@ class ExportX extends React.Component {
                 From Selection
               </button>
             </li>
+            <li className="import-selection-separator">or</li>
             <li className="import-from-directory">
               <button
                 className="import btn"
@@ -891,7 +888,6 @@ class ExportX extends React.Component {
                   id="name"
                   placeholder="%n"
                   className="file-input"
-                  onFocus={this.scrollIntoView}
                   onChange={this.onFileNameChange.bind(this)}
                 />
               </li>
