@@ -1,7 +1,7 @@
 {
   "id": "7ba3f8e4",
   "name": "Export X",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adobe XD plugin for batched resizing, and exporting of image assets",
   "languages": ["en"],
   "author": "Mudlabs",
